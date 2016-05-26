@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1sd",
+    "name": "Kevin Chow",
+    "income": 5000,
+    "goals": {
+    	"percent": 5,
+    	"start": "2016-06-12",
+    	"end": "2016-06-19",
+    	"weeks": 1,
+    	"currentw": 1,
+    	"expectedb": 250,
+    	"currentb": 100
+    },
+    "coupons": "1ab",
+    "image": "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
+
+  },
+
+]

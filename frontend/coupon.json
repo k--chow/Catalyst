@@ -1,11 +1,11 @@
 [
   {
-    _id: 1,
-    name: "Chipotle",
-    category: "Food",
-    expiration-date: "2016-05-29",
-    description: "Buy one get one free."
-    image: "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
+    "_id": "1ab",
+    "name": "Chipotle",
+    "category": "Food",
+    "expiration-date": "2016-05-29",
+    "description": "Buy one get one free.",
+    "image": "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
 
   },
 
