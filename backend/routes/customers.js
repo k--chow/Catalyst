@@ -32,7 +32,7 @@ router.route('/')
 		Customer.remove().exec();
 		res.json({message: 'All customers deleted!'});
 	});
-
+/*
 router.route('/:customer_id')
     //get single event
 	.get(function(req, res) {
@@ -90,6 +90,6 @@ router.route('/:customer_id')
 		});
 	
 	
-
+*/
 
 module.exports = router;

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Catalyst</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/template.css" rel="stylesheet">
+    <script src="../static/js/react.js" type="text/javascript"></script>
+    <script src="../static/js/react-dom.js" type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery.min.js"><\/script>')</script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          </button>
+          <a class="navbar-brand" href="#">Catalyst</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      
+        <h2><i>{motivational phrase here}</i></h2>
+        <br><br>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label for="weekly-income">What is your weekly income?</label><br/>
+            $<input type="number" class="form-control" id="weekly-income" maxlength = "11" value="100">
+          </div>
+          <br/>
+          <br/>
+          <div class="form-group">
+            What percentage of your weekly income would you like to regularly save?
+            <br/>
+            <input type="range" id="percentageInput" name="percentageInput" step=".5" min="1"
+max="3">
+          <label id="percentageStatement"></label>
+          <label id="requirementStatement"></label>
+          </div>
+          <br/>
+          <br/>
+          <div class="form-group">
+            For how many weeks would you like us to help you save?
+            <br>
+
+            <input type="range" id="weekInput" name="weekInput" step="1" min="5"
+max="9">
+            <label id="weekStatement"></label>
+            <label id="totalStatement"></label>
+          </div>
+          <br/>
+          <br/>
+          <div class="form-group">
+            Do you want us to automatically transfer <span id="weekly-saving-requirement"></span> to your savings account weekly?<br/>
+
+            If not, you'll have to remember to transfer this to your savings account manually every week!<br/>
+            <input type="checkbox" name="automatic-choice" value="positive"> Yeah! &emsp;
+            <input type="checkbox" name="automatic-choice" value="negative"> Nah!<br>
+          </div>
+        </form>
+    </div><!-- /.container -->
+
+    <script>
+    
+
+    var percentageValues = {
+        "1": "You've opted to save 10% of your income.",
+            "1.5": "You've opted to save 15% of your income.",
+            "2": "You've opted to save 20% of your income.",
+            "2.5": "You've opted to save 25% of your income.",
+            "3": "You've opted to save 30% of your income."
+    };
+
+    var weekValues = {
+        "5": "You've opted to save for 5 weeks.",
+            "6": "You've opted to save for 6 weeks.",
+            "7": "You've opted to save for 7 weeks.",
+            "8": "You've opted to save for 8 weeks.",
+            "9": "You've opted to save for 9 weeks."
+    };
+
+
+
+    $(function () {
+      //TODO: Re-factor copy-pasted code.
+      var savingsRequirement = $('#weekly-income').val() * $('#percentageInput').val() / 10;
+      $('#requirementStatement').text("This means that you'll have to set aside $" + savingsRequirement + " every week in order to achieve your saving goal!")
+
+      var savingsTotal = $('#weekly-income').val() * $('#percentageInput').val() / 10 * $('#weekInput').val();
+      $('#totalStatement').text("When you complete your saving goal, you'll have saved $" + savingsTotal + " in total!");
+
+      $( "#weekly-saving-requirement" ).text("$" + savingsRequirement);
+
+        $('#weekStatement').text(weekValues[$('#weekInput').val()]);
+        $('#weekInput').on('input change', function () {
+            $('#weekStatement').text(weekValues[$(this).val()]);
+
+            var savingsRequirement = $('#weekly-income').val() * $('#percentageInput').val() / 10;
+            $('#requirementStatement').text("This means that you'll have to set aside $" + savingsRequirement + " every week in order to achieve your saving goal!")
+
+            var savingsTotal = $('#weekly-income').val() * $('#percentageInput').val() / 10 * $('#weekInput').val();
+            $('#totalStatement').text("When you complete your saving goal, you'll have saved $" + savingsTotal + " in total!");
+
+            $( "#weekly-saving-requirement" ).text("$" + savingsRequirement);
+        });
+
+
+        $('#percentageStatement').text(percentageValues[$('#percentageInput').val()]);
+        $('#percentageInput').on('input change', function () {
+            $('#percentageStatement').text(percentageValues[$(this).val()]);
+
+            var savingsRequirement = $('#weekly-income').val() * $('#percentageInput').val() / 10;
+            $('#requirementStatement').text("This means that you'll have to set aside $" + savingsRequirement + " every week in order to achieve your saving goal!")
+
+            var savingsTotal = $('#weekly-income').val() * $('#percentageInput').val() / 10 * $('#weekInput').val();
+            $('#totalStatement').text("When you complete your saving goal, you'll have saved $" + savingsTotal + " in total!");
+
+            $( "#weekly-saving-requirement" ).text("$" + savingsRequirement);
+        });
+
+
+    });
+
+    </script>
+
+</script>
+  </body>
+</html>
