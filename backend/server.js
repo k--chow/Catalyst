@@ -21,7 +21,8 @@ app.use(bodyParser.json());
 
 
 
-var customers = require('./routes/customers')
+var customers = require('./routes/customers');
+var coupons = require('./routes/coupons');
 
 router.use(function(req, res, next) {
 	console.log(req.method, req.url);
@@ -34,6 +35,7 @@ router.get('/', function(req, res) {
 
 app.use('/api', router);
 app.use('/api/customers', customers);
+app.use('/api/coupons', coupons);
 
 app.listen(port);
 console.log('3000 is da port, also follow me on github k--chow');
