@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
-<meta charset="UTF-8"> <title>Super Cool Site</title> <style>
-body {
-text-align:center;
-Starting a Node Server 30
-1{
-2 "name": "http-server",
-3 "main": "server.js"
-4}
-}
-        </style>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
-background:#EFEFEF; padding-top:50px;
 <body>
-<h1>Screw you</h1>
+hi
+<script>
+function Goal(percent, start, end, weeks) {
+	this.percent = percent;
+	this.start = start;
+	this.end = end;
+	this.weeks = weeks;
+}
+
+var test = new Goal(5, "a", "b", 10);
+
+var tests = new Array();
+tests.push(test);
+tests.push(test);
+
+jQuery.ajax({
+	type: 'POST',
+	url: "http://localhost:3000/api/customers",
+	data: {progress: tests},
+	success: function(data) {
+		console.log(data);
+	}
+});
+
+</script>
+/*
 </body>
 </html>

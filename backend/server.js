@@ -29,7 +29,7 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-	res.send('I am the dashboard!');
+	res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.use('/api', router);
