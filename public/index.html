@@ -89,15 +89,18 @@
           <section id="indiv">
           <div class="container-fluid">
             <div class="row" style="text-align: center;">
-                <div id='timeline'>
-                </div>
-            </div>
+                <div class="col-md-1">
+                  <div class="container-fluid">
+                    <span id="resetMain" class="col-md-2" style="text-align: center;">
+                      <a class='reset'
+                        href='javascript:dc.filterAll();dc.renderAll();updateTemp(recentData.temperature)'>reset</a>
+                    </span>
+                  </div>
+              </div>
+          <div class="col-md-4">
+               <div id='timeline'></div>
           </div>
-          <div class="container-fluid">
-            <span id="resetMain" class="col-md-2" style="text-align: center;">
-              <a class='reset'
-                href='javascript:dc.filterAll();dc.renderAll();updateTemp(recentData.temperature)'>reset</a>
-            </span>
+            </div>
           </div>
           
           <br>

@@ -251,7 +251,7 @@ function makeGraphs(error, customerData) {
 
 	timeChart
 		.height(40)
-		.width(868)
+		.width(780)
 		.margins({top: 0, right: 50, bottom: 20, left: 60})
 	    .dimension(dateDim)
 	    .group(expectedBalance)
