@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Catalyst</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/template.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery.min.js"><\/script>')</script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <style>
+    h2 { margin-top: 20pt; }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          </button>
+          <a class="navbar-brand" href="#">Catalyst</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      
+        <h2><i><center>Nice work!</center></i></h2>
+        <br><br><center>
+        <div class="panel panel-primary" style="max-width:75%"><ul>
+        
+        <div id="company"></div>
+        <div id="expiration-date"></div>
+        <div id="image"></div>
+        <div id="description"></div>
+        </center>
+
+        </ul></div>
+
+  <script>
+  var data;
+  console.log("HELLO");
+
+  $.ajax({
+    url: "../coupon.json",
+    data:data})
+    .done( function(result){
+      data = jQuery.parseJSON(result);
+      console.log(data);
+      data.forEach(function(d){
+        console.log(d);
+      })
+      $('#company').text(data[0].name);
+      $('#expiration-date').text(data[0]['expiration-date']);
+      $('#image').text(data[0].image);
+      $('#description').text(data[0].description);
+  });
+  </script>
+  </body>
+
+</html>
