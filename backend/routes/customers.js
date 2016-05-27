@@ -32,7 +32,7 @@ router.route('/')
 		Customer.remove().exec();
 		res.json({message: 'All customers deleted!'});
 	});
-/*
+
 router.route('/:customer_id')
     //get single event
 	.get(function(req, res) {
@@ -44,23 +44,22 @@ router.route('/:customer_id')
 	})
 	//update single customer
 	.put(function(req, res) {
-		// Event.findById(req.params.customer_id, function(err, event) {
-		// 	if (err) res.send(err);
-		// 	if (req.body.name) customer.name = req.body.name;
-		// 	if (req.body.income) customer.income = req.body.income;
-		// 	if (req.body.goals) customer.goals = req.body.goals;
-		// 	if (req.body.progress) customer.progress = req.body.progress;
-		// 	if (req.body.coupon) customer.coupon = req.body.coupon;
-		// 	if (req.body.image) customer.image = req.body.image; 
+		Customer.findById(req.params.customer_id, function(err, customer) {
+		customer.name = req.body.name;
+		customer.income = req.body.income;
+		customer.goals = req.body.goals;
+		customer.progress = req.body.progress;
+		customer.coupon = req.body.coupon;
+		customer.image = req.body.image;
 	
-		// 	event.save(function(err) {
-		// 		if (err) res.send(err);
-		// 		//return message
-		// 		res.json({message: 'Event updated!'});
-		// 	})
-		// })
+		 	customer.save(function(err) {
+		 		if (err) res.send(err);
+		 		//return message
+				res.json({message: 'Event updated!'});
+		 	})
+		 })
 	})
-
+	/*
 	//update event's attribute not already there
 	.post(function(req, res) {
 		Event.findById(req.params.event_id, function(err, event) {
@@ -78,11 +77,11 @@ router.route('/:customer_id')
 			if (req.body.society) event.society = req.body.society;
 			res.json({message: "Attribute added"});
 		});
-	})
+	})*/
 
 	//delete a single event
 	.delete(function(req, res) {
-		Event.remove({
+		Customer.remove({
 			_id: req.params.event_id}, function(err, event) {
 				if (err) return res.send(err);
 				res.json({message: 'Successfully deleted'});
@@ -90,6 +89,6 @@ router.route('/:customer_id')
 		});
 	
 	
-*/
+
 
 module.exports = router;

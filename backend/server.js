@@ -4,7 +4,7 @@ var path = require('path');
 var router = express.Router();
 var port = app.listen(process.env.PORT || 3000);
 var mongoose = require('mongoose');
-//var cors = require('cors');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 mongoose.connect('mongodb://localhost/capitalone', function(err) {
@@ -14,10 +14,11 @@ mongoose.connect('mongodb://localhost/capitalone', function(err) {
     console.log('connection successful');
   }
 });
-
+app.use(cors());
 //use body parser to grab info from POST requets
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 
 
 
