@@ -95,12 +95,10 @@ max="9">
             <input type="checkbox" name="automatic-choice" value="positive"> Yeah! &emsp;
             <input type="checkbox" name="automatic-choice" value="negative"> Nah!<br>
           </div> <br>
-          <button type="submit">Hello.</button>
         </form>
     <br>
     
-    <link href="./dashboard"><span id="" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></link>
-    </div><!-- /.container -->
+    <span><a href="../index.html" class="icon"><i class="glyphicon glyphicon-chevron-right"></i></a></span>
     
 
     <script>
@@ -195,7 +193,7 @@ max="9">
         weeks: weeksValue
       }
     };
-    var url = "http://localhost:3000/api/customers";
+    var url = "http://localhost:8080/api/customers";
     jQuery.ajax({
       type: 'POST',
       url: url,

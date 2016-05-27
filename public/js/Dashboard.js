@@ -197,13 +197,14 @@ function makeGraphs(error, customerData) {
 /******* Overlayed line chart *******/
 
 	// /********* Tool Tips *********/
-	var tip = d3.tip()
-      .attr('class', 'd3-tip')
-      .html(function(d) { 
-      	console.log(d);
-      	return '<span> Goal Balance: $' + format(d.expected_balance) + '</span>' + "<br/>" + "Real Balance: $" + format(d.current_balance);
-      })
-      .offset([-12, 0])
+	var tip;
+	// var tip = d3.tip()
+ //      .attr('class', 'd3-tip')
+ //      .html(function(d) { 
+ //      	console.log(d);
+ //      	return '<span> Goal Balance: $' + format(d.expected_balance) + '</span>' + "<br/>" + "Real Balance: $" + format(d.current_balance);
+ //      })
+ //      .offset([-12, 0])
 	initGoalMeter(recentData, customerData[0].income, data[data.length-1].current_balance);
 
 	lineChart
@@ -233,8 +234,9 @@ function makeGraphs(error, customerData) {
 	    .renderHorizontalGridLines(true)
 	    .renderVerticalGridLines(true)
 	    .on("renderlet", function(chart) {
-	    	tip = d3.tip()
+	    	var tip = d3.tip()
 		      .attr('class', 'd3-tip')
+		      .attr("color", "white")
 		      .html(function(d) { 
 		      	console.log(d);
 		      	return '<span> Balance: $' + (d.y) + '<span>';

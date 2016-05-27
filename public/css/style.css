@@ -23,10 +23,11 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 9998;
-	background: white;
+	background: #f6f6f6;
 	text-align: center;
 	background: "#d3d3d3";
 	padding-top: 20px;
+	margin-bottom: 65px;
 }
 
 #header-inner {
@@ -175,10 +176,6 @@ a.reset:hover {
     transition: background .5s, color .5s;
 }
 
-.d3-tip {
-	line-height: 120%;
-}
-
 /**************************************************
  * pH Bar
  **************************************************/
@@ -234,4 +231,8 @@ section {
 }
 div.row {
 	padding: 25px;
+}
+.d3-tip span {
+	line-height: 120%;
+	color: white;
 }

@@ -3,6 +3,10 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
 }
+#icon {
+  padding: 15px;
+  transform: scale(1.5);
+}
 
 .form-signin {
   max-width: 330px;
