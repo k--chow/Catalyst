@@ -1,0 +1,101 @@
+{
+"Customers": [
+  {
+    "_id": "1sd",
+    "name": "Kevin Chow",
+    "income": 5000.00,
+    "goals": {
+    	"percent": 10,
+    	"start": "2016-06-12",
+      "end": "2016-08-21",
+    	"weeks": 10,
+    },
+    "progress": [
+        {
+          "current_week": 1,
+          "start": "2016-06-12",
+          "expected_balance": 500.00,
+          "current_balance": 525.00
+        },
+        {
+          "current_week": 2,
+          "start": "2016-06-19",
+          "expected_balance": 1000.00,
+          "current_balance": 1008.00
+        }, 
+        {
+          "current_week": 3,
+          "start": "2016-06-26",
+          "expected_balance": 1500.00,
+          "current_balance": 1350.00
+        },
+        {
+          "current_week": 4,
+          "start": "2016-07-03",
+          "expected_balance": 2000.00,
+          "current_balance": 1923.00
+        },
+        {
+          "current_week": 5,
+          "start": "2016-07-10",
+          "expected_balance": 2500.00,
+          "current_balance": 2604.00
+        },
+        {
+          "current_week": 6,
+          "start": "2016-07-17",
+          "expected_balance": 3000.00,
+          "current_balance": 3478.00
+        },
+        {
+          "current_week": 7,
+          "start": "2016-07-24",
+          "expected_balance": 3500.00,
+          "current_balance": 3833.00
+        },
+        {
+          "current_week": 8,
+          "start": "2016-07-31",
+          "expected_balance": 4000.00,
+          "current_balance": 4200.00
+        },
+        {
+          "current_week": 9,
+          "start": "2016-08-07",
+          "expected_balance": 4500.00,
+          "current_balance": 4350.00
+        },
+        {
+          "current_week": 10,
+          "start": "2016-08-14",
+          "expected_balance": 5000.00,
+          "current_balance": 5053.00
+        }
+      ],
+    "coupons": "1ab",
+    "image": "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
+  }
+],
+"Coupons": [
+  {
+    "_id": "1ab",
+    "name": "Chipotle",
+    "category": "Food",
+    "expiration_date": "2016-05-29",
+    "description": "Buy one get one free.",
+    "image": "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
+
+  },
+
+  {
+    "_id": "1ab",
+    "name": "Chipotle",
+    "category": "Food",
+    "expiration_date": "2016-05-29",
+    "description": "Buy one get one free.",
+    "image": "https://pbs.twimg.com/profile_images/616043541815386112/i7FxHNpE.jpg"
+
+  }
+
+]
+}

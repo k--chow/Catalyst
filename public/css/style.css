@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+/**************************************************
+ * PAGE STRUCTURE
+ **************************************************/
+body {
+	height: 100%;
+	width: 100%;
+	background: #f9f9f9;
+	background-size: 100% auto;
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: transparent;
+}
+
+#header {
+	width: 100%;
+	height: 160px;
+	top: 0;
+	left: 0;
+	z-index: 9998;
+	background: white;
+	text-align: center;
+	background: "#d3d3d3";
+	padding-top: 20px;
+}
+
+#header-inner {
+	padding: 20px 0 0 0;
+}
+
+#content {
+	margin-top: 70px;
+	width: 100%;
+	position: relative;
+	background: transparent;
+	padding: 0px 10% 0px 10%;
+}
+
+#footer {
+	width: 100%;
+	height: 200px;
+	background: rgba(255, 255, 255, 0.05);
+	position: relative;
+}
+
+/**************************************************
+ * ELEMENT STRUCTURE
+ **************************************************/
+
+.button-style {
+	background-color: transparent;
+	cursor: pointer;
+	color: #003A6F;
+	border: none;
+	box-shadow: none;
+	font-weight: 400;
+}
+
+
+
+/**************************************************
+ * HEADER INNER
+ **************************************************/
+.header-col {
+	padding-top: 15px;
+}
+
+/**************************************************
+ * TEXT AND ELEMENT STYLING
+ **************************************************/
+span, div, p {
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-weight: 300;
+}
+
+.graph-label p {
+	line-height: 45px;
+	margin: 0 0 0 10px;
+	color: black;
+}
+
+
+.title {
+	font-size: 32px;
+	color: black;
+	font-weight: 300;
+	text-transform: uppercase;
+	vertical-align:middle;
+}
+
+
+line {
+	opacity: 0;
+}
+
+.dc-chart g.axis text {
+	font-family: 'Lato', sans-serif;
+	fill: black;
+}
+
+/*#timeline svg {
+	padding-left: 12px;
+}*/
+.dc-chart .axis path, .axis line {
+	stroke: black;
+	opacity: .3;
+}
+
+
+/**************************************************
+ * MAIN GRAPH BUTTONS
+ **************************************************/
+
+#timeline {
+	padding: 20px 0 20px 0;
+}
+
+#select-filter {
+	padding: 0 0 40px 0;
+}
+
+#select-filter button {
+	border: none;
+	background: rgba(255, 255, 255, 0.1);
+	font-size: 14px;
+	color: white;
+	width: 100px;
+	padding: 10px 0;
+}
+
+#select-filter button:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+#select-filter .btn.btn-default.active {
+	background: rgba(150, 150, 150, 0.1);
+}
+
+/**************************************************
+ * MAIN GRAPH RESET
+ **************************************************/
+a.reset {
+	/*position: absolute;*/
+	text-decoration: none;
+	background-color: transparent;
+	display: inline-block;
+	cursor: pointer;
+	background: rgba(0, 58, 111, 0.2);
+	font-size: 11px;
+	line-height: 25px;
+	text-align: center;
+	width: 50px;
+	height: 30px;
+	border: 1px solid rgba(0, 58, 111, 1.0);
+	box-shadow: none;
+	border-radius: 32px;
+	font-weight: 400;
+	margin-top: 5px;
+
+}
+
+a.reset:hover {
+	text-decoration: none;
+	background: rgba(0, 58, 111, 0.6);
+	border: 1px solid rgba(0, 58, 111, 1.0);
+	outline: none;
+	color: white;
+	-webkit-transition: background .5s, color .5s; 
+    transition: background .5s, color .5s;
+}
+
+.d3-tip {
+	line-height: 120%;
+}
+
+/**************************************************
+ * pH Bar
+ **************************************************/
+.movingBar {
+	opacity: 0.5;
+}
+
+/**************************************************
+ * Dot Nav Bar
+ **************************************************/
+.navDot {
+    position: fixed;
+    top: 50%;
+    left: 93%;
+    width: 50px;
+    z-index: 100;
+    list-style-type: none;
+}
+.navDot ul li {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 35%;
+    color: rgb(113,135,133);
+    list-style-type: none;
+}
+.navDot a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: rgb(113,135,133);
+    text-decoration: none;
+}
+.navDot a.active {
+    border-radius: 50%;
+    background-color: rgb(207,219,218);
+    text-decoration: none;
+}
+.navDot a:hover {
+    border-radius: 50%;
+    background-color: rgb(113,135,133);
+    text-decoration: none;
+}
+section {
+	position: relative;
+}
+#expected, #current {
+	font-size: 25px;
+}
+#usage-email {
+	padding: 25px;
+}
+div.row {
+	padding: 25px;
+}
